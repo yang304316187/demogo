@@ -79,7 +79,7 @@ func main() {
 		WriteTimeout:   setting.WriteTimeout,
 		MaxHeaderBytes: 1 << 20,
 	}
-	http.HandleFunc("/ping", wsHandler)
+	http.HandleFunc("/ws", wsHandler)
 	// 监听127.0.0.1:7777
 	err := http.ListenAndServe("0.0.0.0:7777", nil)
 	if err != nil {
